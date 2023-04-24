@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Body Mass Index (BMI) Calculator</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="assets/fontawesome-free-5.8.1-web/css/all.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+</head>
+<body>
+
+	<div class="container page">
+		<div class="row head">
+			<div class="col-lg-12">
+			<i class="fas fa-balance-scale"></i> Body Mass Index (BMI)
+			</div>
+		</div>		
+
+		<div class="row main">
+			<div class="col-lg-12">
+				<form name="BMI">
+					<nav>
+						<div class="nav nav-tabs change_tab" id="nav-tab" role="tablist">
+						  <a class="nav-item nav-link change_tab_link" id="nav-male-tab" data-toggle="tab" href="#nav-male" role="tab" aria-controls="nav-male" aria-selected="false"><i class="fas fa-male"></i> Male</a>
+						  <a class="nav-item nav-link change_tab_link" id="nav-female-tab" data-toggle="tab" href="#nav-female" role="tab" aria-controls="nav-female" aria-selected="false"><i class="fas fa-female"></i> Female</a>
+						</div>
+				    </nav><br />
+
+				    <!-- tab-contents starts here -->
+				     <div class="tab-content" id="nav-tabContent">
+				     	  <!-- BMI check for males -->
+						<div class="tab-pane fade" id="nav-male" role="tabpanel" aria-labelledby="nav-male-tab">
+						   <div class="form-row">
+								<div class="form-group col-md-10">
+								    <label for="mheight">Height</label>
+								    <input type="text" name="male-height" class="form-control" id="mheight">
+								</div>
+								<div class="form-group col-md-2">
+								    <label for="inputUnit">Unit</label>
+								    <select id="inputUnit" class="form-control" disabled>
+								        <option selected>CM</option>
+								    </select>
+								</div>
+					        </div>
+					        <!-- <br/> -->
+							<div class="form-row">
+								<div class="form-group col-md-10">
+								    <label for="mweight">Weight</label>
+								    <input type="text" name="male-weight" class="form-control" id="mweight">
+								</div>
+								<div class="form-group col-md-2">
+								    <label for="inputUnit">Unit</label>
+								    <select id="inputUnit" class="form-control" disabled>
+								        <option selected>KG</option>
+								    </select>
+								</div>
+					        </div>
+					       <br/>
+					       	<div class="form-row">
+						        <div class="form-group col-md-12">
+						        	<label for="mtextview" id="results">Result</label>
+	     							<input type="text" class="form-control text-view" name="male-display" id="mtextview" disabled>
+						        </div>
+					       </div>
+					       <div class="form-row">					
+						   		<button type="button" class="btn btn-primary btn-md btn-block button-chk" onclick="displayMaleResults()">Calculate BMI</button>  
+						   </div>  		
+						</div>
+						<!-- BMI check for male ends -->
+
+						<!-- BMI check for female starts -->
+						<div class="tab-pane fade" id="nav-female" role="tabpanel" aria-labelledby="nav-female-tab">
+						   <div class="form-row">
+								<div class="form-group col-md-10">
+								    <label for="fheight">Height</label>
+								    <input type="text" name="female-height" class="form-control" id="fheight">
+								</div>
+								<div class="form-group col-md-2">
+								    <label for="inputUnit">Unit</label>
+								    <select id="inputUnit" class="form-control" disabled>
+								        <option selected>CM</option>
+								    </select>
+								</div>
+					        </div>
+					        <!-- <br/> -->
+							<div class="form-row">
+								<div class="form-group col-md-10">
+								    <label for="fweight">Weight</label>
+								    <input type="text" name="female-weight" class="form-control" id="fweight">
+								</div>
+								<div class="form-group col-md-2">
+								    <label for="inputUnit">Unit</label>
+								    <select id="inputUnit" class="form-control" disabled>
+								        <option selected>KG</option>
+								    </select>
+								</div>
+					        </div>
+					       <br/>
+					       	<div class="form-row">
+						        <div class="form-group col-md-12">
+						        	<label for="ftextview" id="results">Result</label>
+	     							<input type="text" class="form-control text-view" name="female-display" id="ftextview" disabled>
+						        </div>
+					       </div>
+					       <div class="form-row">					
+						   		<button type="button" class="btn btn-primary btn-md btn-block button-chk" onclick="displayFemaleResults()">Calculate BMI</button>  
+						   </div>  		
+						</div>
+						<!-- BMI check for female ends -->	
+				    </div>
+			    </form>	
+			</div>
+		</div>	
+		<!-- End of Main -->
+
+		<div class="author">
+			Developed by Daniel A. Adu <br/>
+			<a href="https://www.linkedin.com/in/daniel-adu" target="_blank"><img src="assets/img/linkedin.png" alt="linkedin"/></a> &nbsp; <a href="https://www.github.com/nana-adu" target="_blank"><img src="assets/img/github.png" alt="gitHub" /></a> &nbsp; <a href="https://www.instagram.com/branana_adu" target="_blank"><img src="assets/img/instagram.png" alt="Instagram" /></a>
+		</div>
+		
+	</div>
+	<!-- End of Container -->
+	
+	
+
+
+
+
+	
+	<!-- Bootstrap 4 js libraries -->
+	<script type="text/javascript" src="assets/js/jquery-3.3.1.slim.min.js"></script>
+	<script type="text/javascript" src="assets/js/popper.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/math.js"></script>
+</body>
+</html>
